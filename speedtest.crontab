@@ -1,0 +1,1 @@
+*   *   *   *   *   echo "Running speed test." && (speedtest-cli --json >> /tests/`date +'%s'`.json) && echo "Speed test completed."

@@ -1,0 +1,18 @@
+version: "3.6"
+
+services:
+  ui:
+    image: node
+    volumes:
+      - ./ui:/app
+      - ./tests:/tests:ro
+    command: npm start
+    working_dir: /app
+    ports:
+      - 8080:3000
+  speedtest:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./tests:/tests
